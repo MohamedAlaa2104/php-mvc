@@ -1,0 +1,15 @@
+{
+    "name": "aladdin/mvc",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mohamed Aladdin",
+            "email": "mohamedalaa2104@gmail.com"
+        }
+    ],
+    "require": {}
+}
