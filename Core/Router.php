@@ -46,7 +46,7 @@ class Router
         }
 
         //[object, method]
-        return call_user_func($callback);
+        return call_user_func($callback, $this->request);
         // select the callback based on the path and request type
     }
 
@@ -60,6 +60,10 @@ class Router
 
     public function renderOnlyView($viewName, $params = [])
     {
+        foreach ($params as $key => $value) {
+            $$key = $value;
+        }
+
         ob_start();
         include_once  __DIR__. "./../views/$viewName.php";
         return ob_get_clean();

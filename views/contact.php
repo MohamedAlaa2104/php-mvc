@@ -1,3 +1,9 @@
+
+<?php
+
+
+?>
+
 <h1>Contact us Page</h1>
 
 <form action="/contact" method="post">

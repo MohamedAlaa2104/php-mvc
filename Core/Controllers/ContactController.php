@@ -3,13 +3,15 @@
 namespace app\Core\Controllers;
 
 use app\Core\Application;
-
+use app\Core\Request;
 class ContactController
 {
 
-    public function index()
+    public function index(Request $request)
     {
-        return Application::$app->router->renderView('contact');
+        $data = $request->getBody();
+
+        return Application::$app->router->renderView('contact', $data);
     }
 
     public function store()
